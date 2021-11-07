@@ -13,5 +13,7 @@ spring:
 
 server:
   port: 8090
-  servlet:
-    context-path: /indications
+
+springdoc:
+  swagger-ui:
+    path: /swag
