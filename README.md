@@ -25,13 +25,9 @@ Para testar a API será necessário seguir os passos descritos abaixo:
 O arquivo de carga deve possuir o nome "movielist.csv" e, deverá ficar dentro da pasta "resources" do projeto. O arquivo deverá possuir cinco colunas delimitadas por ";". Abaixo temos um exemplo do utilizado para carga de dados da api:
 
 year;title;studios;producers;winner
-
 1980;Can't Stop the Music;Associated Film Distribution;Allan Carr;yes
-
 1980;Cruising;Lorimar Productions, United Artists;Jerry Weintraub;
-
 1981;Mommie Dearest;Paramount Pictures;Frank Yablans;yes
-
 1981;Endless Love;Universal Studios, PolyGram;Dyson Lovell;
 
 
