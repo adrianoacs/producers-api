@@ -1,9 +1,0 @@
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/domain/entities/Winner.java
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/application/component/impl/ProducerCompImpl.java
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/application/service/ProducerService.java
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/application/service/impl/ProducerServiceImpl.java
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/domain/valueobjects/WinnerIntervalsVO.java
-/home/adriano/Estudo/Producers/src/main/java/infraestructure/repositories/WinnerRepository.java
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/application/component/ProducerComp.java
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/producersApplication.java
-/home/adriano/Estudo/Producers/src/main/java/br/com/producers/domain/valueobjects/IntervalVO.java
