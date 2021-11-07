@@ -10,3 +10,8 @@ spring:
     console:
       enabled: true
       path: /h2-console
+
+server:
+  port: 8090
+  servlet:
+    context-path: /indications
