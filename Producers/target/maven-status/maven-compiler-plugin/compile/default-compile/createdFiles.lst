@@ -1,0 +1,12 @@
+br/com/producers/application/component/ProducerComp.class
+br/com/producers/domain/valueobjects/WinnerIntervalsVO$WinnerIntervalsVOBuilder.class
+br/com/producers/application/service/impl/ProducerServiceImpl.class
+br/com/producers/domain/entities/Winner.class
+br/com/producers/domain/valueobjects/WinnerIntervalsVO.class
+br/com/producers/application/service/ProducerService.class
+br/com/producers/producersApplication.class
+br/com/producers/domain/valueobjects/IntervalVO$IntervalVOBuilder.class
+br/com/producers/application/component/impl/ProducerCompImpl.class
+br/com/producers/domain/valueobjects/IntervalVO.class
+infraestructure/repositories/WinnerRepository.class
+br/com/producers/domain/entities/Winner$WinnerBuilder.class
