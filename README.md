@@ -19,7 +19,7 @@ Para testar a API será necessário seguir os passos descritos abaixo:
 - Clicar no botão "Try it out".
 - Clicar no botão "Execute".
 
-6. Um outro caminho para testar a aplicação é acessando o endereço http://localhost:8090/api/winners.
+6. Um outro caminho para testar a aplicação é acessando o endereço http://localhost:8090/api/winners. Esse endereço pode ser utilizado também para testes nas ferramentas Postman ou SoapUI.
 
 #### Arquivo de carga
 O arquivo de carga deve possuir o nome "movielist.csv" e, deverá ficar dentro da pasta "resources" do projeto. O arquivo deverá possuir cinco colunas delimitadas por ";". Abaixo temos um exemplo do utilizado para carga de dados da api:
