@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Locale;
 
 @Component
@@ -22,7 +23,7 @@ public class FileReaderCompImpl implements FileReaderComp {
 
     private final WinnerRepository winnerRepository;
 
-    FileReaderCompImpl(WinnerRepository winnerRepository){
+    FileReaderCompImpl(WinnerRepository winnerRepository) {
         this.winnerRepository = winnerRepository;
     }
 
@@ -35,16 +36,19 @@ public class FileReaderCompImpl implements FileReaderComp {
             BufferedReader br = new BufferedReader(fr);
             String line;
             br.readLine();
-            while((line = br.readLine())!=null)
-            {
+            while ((line = br.readLine()) != null) {
                 var item = line.split(";");
-                winnerRepository.save(Indication.builder()
-                        .year(Integer.parseInt(item[0]))
-                        .title(item[1])
-                        .studio(item[2])
-                        .producer(item[3])
-                        .winner(getWinner(item))
-                        .build());
+                var producers = item[3].toUpperCase(Locale.ROOT).split("\\sAND\\s|,\\s");
+                Arrays.stream(producers).sequential().forEach(producer -> {
+                    winnerRepository.save(Indication.builder()
+                            .year(Integer.parseInt(item[0]))
+                            .title(item[1])
+                            .studio(item[2])
+                            .producer(producer)
+                            .winner(getWinner(item))
+                            .build());
+                });
+
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -54,7 +58,7 @@ public class FileReaderCompImpl implements FileReaderComp {
     }
 
     private boolean getWinner(String[] s) {
-        if(s.length == 4){
+        if (s.length == 4) {
             return false;
         }
         return s[4].toUpperCase(Locale.ROOT).equals("YES");

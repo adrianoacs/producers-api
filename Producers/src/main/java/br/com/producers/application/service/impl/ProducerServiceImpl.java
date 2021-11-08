@@ -8,6 +8,7 @@ import br.com.producers.infraestructure.repositories.WinnerRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,10 +37,25 @@ public class ProducerServiceImpl implements ProducerService {
         });
 
 
+        sortList(minInterval, 1);
+        sortList(maxInterval, -1);
+
         return winnerIntervalsVO
                 .min(minInterval)
                 .max(maxInterval)
                 .build();
+    }
+
+    private void sortList(ArrayList<IntervalVO> minInterval, Integer fator) {
+        Collections.sort(minInterval, (item1, item2) -> {
+            if (item1.getInterval() > item2.getInterval()) {
+                return 1 * fator;
+            } else if (item1.getInterval() < item2.getInterval()) {
+                return -1 * fator;
+            } else {
+                return 0;
+            }
+        });
     }
 
     private void getMinMaxInterval(String producer, List<Indication> winners, List<IntervalVO> maxInterval, List<IntervalVO> minInterval) {
