@@ -17,3 +17,12 @@ server:
 springdoc:
   swagger-ui:
     path: /swag
+
+loadFile: classpath:movielist.csv
+
+---
+spring:
+  profiles: test
+
+
+loadFile: classpath:movielistTest.csv

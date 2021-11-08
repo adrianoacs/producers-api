@@ -18,7 +18,7 @@ import java.util.Locale;
 @Component
 public class FileReaderCompImpl implements FileReaderComp {
 
-    @Value("classpath:movielist.csv")
+    @Value("${loadFile}")
     Resource movieList;
 
     private final WinnerRepository winnerRepository;
@@ -52,8 +52,11 @@ public class FileReaderCompImpl implements FileReaderComp {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.out.println("Arquivo 'movielist.csv' não encontrado no diretório 'resources' da aplicação.");
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Erro na leitura do arquivo de entrada. " +
+                    "Certifique-se que o mesmo esteja na estrutura correta");
         }
     }
 
